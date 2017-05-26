@@ -12,5 +12,3 @@ function Flogger() {
 }
 
 Flogger.prototype.constructor = Flogger;
-
-export { Flogger };
