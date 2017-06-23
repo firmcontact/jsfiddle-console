@@ -17,5 +17,6 @@ function Flogger() {
 		let item = document.createElement("p");
 		item.appendChild(text);
 		div.appendChild(item);
+		div.scrollTop += 50;
 	}
 }
