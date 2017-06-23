@@ -3,9 +3,12 @@
  */
 
 function Flogger() {
+	let hasStyle = arguments.length > 0 ? arguments[0] : false;
 	let div = document.createElement("div");
 	let body = document.getElementsByTagName("body")[0];
-	div.style.cssText = 'margin:10px 0;padding:10px;background:#ffffff; border:1px solid #dedede;max-height:200px;overflow-y:auto;';
+  
+  if (hasStyle) div.style.cssText = 'margin: 10px 0; padding: 10px; background: #ffffff; border: 1px solid #dedede;height:200px; overflow-y:auto;';
+  
   body.insertBefore(div, body.childNodes[0]);
   
 	this.type = 'Flogger';
