@@ -3,7 +3,7 @@
  */
 
 function Flogger() {
-	let hasStyle = arguments.length > 0 ? arguments[0] : false;
+	let hasStyle = arguments.length > 0 ? arguments[0] : true;
 	let div = document.createElement("div");
 	let body = document.getElementsByTagName("body")[0];
   
