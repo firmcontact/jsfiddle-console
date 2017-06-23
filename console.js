@@ -3,12 +3,16 @@
  */
 
 function Flogger() {
-
+	let div = document.createElement("div");
+	let body = document.getElementsByTagName("body")[0];
+	div.style.cssText = 'margin:10px 0;padding:10px;background:#ffffff; border:1px solid #dedede;max-height:200px;overflow-y:auto;';
+  body.insertBefore(div, body.childNodes[0]);
+  
 	this.type = 'Flogger';
 	this.log = (obj) => {
-		document.getElementsByTagName("body")[0].innerHTML += typeof obj === 'object' ? `<pre>${JSON.stringify(obj, null, 3)}</pre>` : typeof obj === 'function' ? obj() : obj;
+		let text = document.createTextNode(typeof obj === 'object' ? JSON.stringify(obj, null, 3) : typeof obj === 'function' ? obj() : obj);
+		let item = document.createElement("p");
+		item.appendChild(text);
+		div.appendChild(item);
 	}
-
 }
-
-Flogger.prototype.constructor = Flogger;
