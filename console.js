@@ -14,7 +14,7 @@ function Flogger() {
 	this.type = 'Flogger';
 	this.log = (obj) => {
 		let text = document.createTextNode(typeof obj === 'object' ? JSON.stringify(obj, null, 3) : typeof obj === 'function' ? obj() : obj);
-		let item = document.createElement("p");
+		let item = document.createElement("pre");
 		item.appendChild(text);
 		div.appendChild(item);
 		div.scrollTop += 50;
