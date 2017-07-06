@@ -2,7 +2,7 @@
  * @author rudy sandoval / http://rainworks.io/
  */
 
-function Flogger() {
+function JSlogger() {
 	let hasStyle = arguments.length > 0 ? arguments[0] : true;
 	let div = document.createElement("div");
 	let body = document.getElementsByTagName("body")[0];
@@ -11,7 +11,7 @@ function Flogger() {
   
   body.insertBefore(div, body.childNodes[0]);
   
-	this.type = 'Flogger';
+	this.type = 'JSlogger';
 	this.log = (obj) => {
 		let text = document.createTextNode(typeof obj === 'object' ? JSON.stringify(obj, null, 3) : typeof obj === 'function' ? obj() : obj);
 		let item = document.createElement("pre");
